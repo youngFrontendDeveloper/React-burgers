@@ -43,20 +43,47 @@
 
 
 // Появление суммы  (стоимости заказанных бургеров) в count*price
-.price-enter
+.cost-enter
   transition: 0.5s;
   transform: translateY(100%);
 
-  &.price-enter-active
+  &.cost-enter-active
     transform: translateY(0);
 
 // исчезновение суммы  (стоимости заказанных бургеров) в count*price
-.price-exit
+.cost-exit
   transition: 0.5s;
   transform: translateY(0);
   position: absolute;
   left: 0;
   bottom: 0;
 
-  &.price-exit-active
+  &.cost-exit-active
+    transform: translateY(-100%);
+
+
+  .amount
+    position: relative;
+    display: flex;
+    align-content: center;
+    overflow: hidden;
+
+
+// Появление суммы  (стоимости заказанных бургеров) в count*price
+.amount-enter
+  transition: 0.5s;
+  transform: translateY(100%);
+
+  &.amount-enter-active
+    transform: translateY(0);
+
+// исчезновение суммы  (стоимости заказанных бургеров) в count*price
+.amount-exit
+  transition: 0.5s;
+  transform: translateY(0);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  &.amount-exit-active
     transform: translateY(-100%);

@@ -53,19 +53,32 @@
   transform: translateY(-100%);
 }
 
-.price-enter {
+.order__container {
+  display: flex;
+}
+
+ul.order li span.cost {
+  position: relative;
+  overflow: hidden;
+}
+
+ul.order li span.cost span {
+  display: inline-block;
+}
+
+.cost-enter {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   -webkit-transform: translateY(100%);
   transform: translateY(100%);
 }
 
-.price-enter.price-enter-active {
+.cost-enter.cost-enter-active {
   -webkit-transform: translateY(0);
   transform: translateY(0);
 }
 
-.price-exit {
+.cost-exit {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   -webkit-transform: translateY(0);
@@ -75,7 +88,42 @@
   bottom: 0;
 }
 
-.price-exit.price-exit-active {
+.cost-exit.cost-exit-active {
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+
+.amount {
+  position: relative;
+  display: flex;
+  align-content: center;
+  overflow: hidden;
+
+}
+
+.amount-enter {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+}
+
+.amount-enter.amount-enter-active {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.amount-exit {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.amount-exit.amount-exit-active {
   -webkit-transform: translateY(-100%);
   transform: translateY(-100%);
 }
@@ -449,7 +497,7 @@ ul.order li button:after {
 ul.order li span.count {
   position: relative;
   overflow: hidden;
-  float: left;
+  /*float: left;*/
 }
 
 ul.order li span.count span {
@@ -477,6 +525,7 @@ ul.order li span.count span {
 }
 
 .total_wrap-final {
+  display: flex;
   margin-top: 10px;
 }
 

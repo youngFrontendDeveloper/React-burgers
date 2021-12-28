@@ -5,8 +5,15 @@
 /.pnp
 .pnp.js
 
-# testing
+ # testing
 /coverage
+ .idea/
+ firebase-rules.json
+  netlify.toml
+  now.json
+
+#src
+App-old.js
 
 # production
 /build
