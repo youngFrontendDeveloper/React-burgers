@@ -23,7 +23,7 @@ class SignIn extends React.Component {
     signInWithPopup( auth, authProvider )
       .then( (result) => {
         const credential = GithubAuthProvider.credentialFromResult( result );
-        const token = credential.accessToken;
+        // const token = credential.accessToken;
         console.log( result.user.email );
         // const user = result.user;
         this.setState( { user: result.user.email } );
@@ -37,7 +37,7 @@ class SignIn extends React.Component {
       const email = error.email;
       console.log( email );
       // The AuthCredential type that was used.
-      const credential = GithubAuthProvider.credentialFromError( error );
+      // const credential = GithubAuthProvider.credentialFromError( error );
       // ...
     } );
   };

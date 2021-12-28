@@ -30,20 +30,20 @@ function App() {
     } );
     // };
     // return unsubscribe;   // отписка от получения данных
-  }, [] );
+  }, [ restaurantsId ] );
 
 
   //  Обновление данных базы Firebase при изменении в burgers
   useEffect( () => {
     set( ref( db, `${ restaurantsId }/burgers` ), burgers );
     console.log( burgers );
-  }, [ burgers ] );
+  }, [ restaurantsId, burgers ] );
 
 
   // Записываем в localStorage сведения о заказе при обновлении заказа:
   useEffect( () => {
     localStorage.setItem( restaurantsId, JSON.stringify( order ) );
-  }, [ order ] );
+  }, [ restaurantsId, order ] );
 
 
   // Добавление бургеров в меню
